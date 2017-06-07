@@ -1,0 +1,31 @@
+version: '2'
+services:
+  mysql:
+    image: "mysql"
+    networks:
+     - etherpad
+    ports:
+     - "3306:3306"
+    volumes:
+     - ./data:/var/lib/etherpad_data
+    environment:
+     - MYSQL_ROOT_PASSWORD=password
+
+  etherpad:
+    image: "tvelocity/etherpad-lite"
+    networks:
+     - etherpad
+    ports:
+     - "9001:9001"
+    environment:
+     - ETHERPAD_ADMIN_USER=admin
+     - ETHERPAD_ADMIN_PASSWORD=admin
+     - ETHERPAD_DB_HOST=mysql
+     - ETHERPAD_DB_PASSWORD=password
+    links:
+     - mysql
+
+networks:
+  etherpad:
+    driver: bridge
+
