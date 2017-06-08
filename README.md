@@ -3,8 +3,9 @@ Docker for etherpad with mysql
 
 ````
 $> cd etherpad-docker
-$> docker-compose up
+$> docker-compose up   (or docker-compose up -d)
 ````
+[docker-compose up](https://docs.docker.com/compose/reference/up/)
 
 ### (optional for new instance) migrate data into mysql container:
 ````
