@@ -7,6 +7,13 @@ $> docker-compose up   (or docker-compose up -d)
 ````
 [docker-compose up](https://docs.docker.com/compose/reference/up/)
 
+### Once containers ready, how to start and stop without removing the containers
+(Stops running containers without removing them. They can be started again with docker-compose start.)
+````
+docker-compose stop
+docker-compose start
+````
+
 ### (optional for new instance) migrate data into mysql container:
 ````
 $> sudo docker exec -it <mysql_contianer_id> /bin/bash
