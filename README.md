@@ -14,7 +14,8 @@ docker-compose stop
 docker-compose start
 ````
 
-### (optional for new instance) migrate data into mysql container:
+### (optional for new instance) migrate data into mysql container manually:
+### or placing the sql file(etherpad.sql) under data directory  
 ````
 $> sudo docker exec -it <mysql_contianer_id> /bin/bash
 $> mysql -u root -p etherpad < /var/lib/etherpad_data/etherpad.sql
