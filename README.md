@@ -28,7 +28,7 @@ see: [http://localhost:9001/](http://localhost:9001/)
 sudo docker exec CONTAINERID mysqldump -u root --password=password etherpad > data/etherpad.sql
 ````
 
-### Usefull plugins for newly etherpad instance
+### Useful plugins for newly etherpad instance
 http://localhost:9001/admin
 ````
 - adminpads 	Gives the ability to list and administrate all pads on admin page	
