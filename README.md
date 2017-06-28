@@ -22,3 +22,8 @@ $> mysql -u root -p etherpad < /var/lib/etherpad_data/etherpad.sql
 ````
 
 see: [http://localhost:9001/](http://localhost:9001/)
+
+### Dump mysql
+````
+sudo docker exec CONTAINERID mysqldump -u root --password=password etherpad > data/etherpad.sql
+````
