@@ -15,11 +15,12 @@ docker-compose start
 ````
 
 ### (optional for new instance) migrate data into mysql container manually:
-### or placing the sql file(etherpad.sql) under data directory  
 ````
 $> sudo docker exec -it <mysql_contianer_id> /bin/bash
 $> mysql -u root -p etherpad < /var/lib/etherpad_data/etherpad.sql
 ````
+### or placing the sql file(etherpad.sql) under data directory
+_the data will be automatically import on container created_
 
 see: [http://localhost:9001/](http://localhost:9001/)
 
